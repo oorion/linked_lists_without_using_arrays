@@ -166,6 +166,28 @@ class IterativeLinkedList
 	
 	end
 
+	def distance(first, last)
+		current = @head
+		location = 0
+
+		while current.next_node != nil
+			start_loc = location if current.data == first
+				
+			end_loc = location if current.data == last
+				
+			current = current.next_node
+			location += 1
+		end
+		end_loc = location if current.data == last
+		return end_loc - start_loc
+	end
+
+
+			
+
+
+
+
 end
 
 class Node
