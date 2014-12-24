@@ -1,4 +1,3 @@
-require 'pry'
 class IterativeLinkedList
 
 	attr_reader :head, :count
@@ -167,7 +166,6 @@ class IterativeLinkedList
 	
 	end
 
-
 end
 
 class Node
@@ -181,10 +179,3 @@ class Node
 	end
 
 end
-
-
-list = IterativeLinkedList.new
-list.push("hello")
-list.push("world")
-list.push("today")
-list.insert_after("hello", "pizza")
