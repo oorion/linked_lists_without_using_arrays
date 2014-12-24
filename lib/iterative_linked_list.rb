@@ -64,8 +64,6 @@ class IterativeLinkedList
 			@head = head.next_node
 		else
 
-			
-
 			while current.next_node != nil
 				last = current
 				current = current.next_node
@@ -82,6 +80,94 @@ class IterativeLinkedList
 		end
 	end
 
+	def to_a		
+		return [] if head.nil?
+
+		data = []
+		current = @head
+		while current.next_node != nil
+			data << current.data
+			current = current.next_node
+		end
+		
+		data << current.data
+		data
+
+	end
+
+	def last_node
+		current = @head
+
+		while current.next_node != nil
+			current = current.next_node
+		end
+		current
+	end
+
+	def head_node
+		@head
+	end
+
+	def include?(data)
+		current = @head
+
+		while current.next_node != nil
+			return true if current.data == data
+			current = current.next_node
+		end
+		false
+
+	end
+
+	def find(data)
+		current = @head
+
+		while current.next_node != nil
+			return current if current.data == data
+			current = current.next_node
+		end
+
+	end
+
+	def insert(position, data)
+		current = @head
+		location = 1
+		while current.next_node.next_node != nil
+			if location == position
+				current.next_node = Node.new(data, current.next_node)
+				return 0
+			else
+				current = current.next_node
+				location += 1
+			end
+		end
+	end
+
+
+	def index(data)
+		current = @head
+		location = 0
+		while current.next_node != nil
+			return location if current.data == data
+			current = current.next_node
+			location += 1
+		end
+	end
+
+	def insert_after(after, data)
+		current = @head
+
+		while current.next_node.next_node != nil
+			if current.data == after
+				current.next_node = Node.new(data, current.next_node)
+				return 0
+			end
+			current = current.next_node
+		end
+	
+	end
+
+
 end
 
 class Node
@@ -91,18 +177,14 @@ class Node
 	def initialize(data, next_node)
 		@data 		= data
 		@next_node 	= next_node
-		puts "Creating node with data: " + data.to_s
+		# puts "Creating node with data: " + data.to_s
 	end
 
 end
 
 
-# list = IterativeLinkedList.new
-# list.push("hello")
-# list.push("world")
-# list.push("today")
-# puts list.pop
-# puts list.count
-# puts list.pop
-# puts list.count
-
+list = IterativeLinkedList.new
+list.push("hello")
+list.push("world")
+list.push("today")
+list.insert_after("hello", "pizza")

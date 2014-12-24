@@ -63,7 +63,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_deletes_a_middle_node
-
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -84,12 +83,10 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_converts_to_an_array_when_there_are_no_elements
-    skip
     assert_equal [], list.to_a
   end
 
   def test_it_converts_to_an_array_with_several_elements
-    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -97,7 +94,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_finds_the_last_node
-    skip
     list.push("hello")
     list.push("world")
     node = list.last_node
@@ -105,7 +101,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_a_node_links_to_its_next_element
-    skip
     list.push("hello")
     list.push("world")
     assert_equal "world", list.last_node.data
@@ -113,13 +108,11 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_next_node_for_the_last_node_is_nil
-    skip
     list.push("world")
     assert_nil list.last_node.next_node
   end
 
   def test_find_if_an_element_is_included_in_the_list
-    skip
     list.push("hello")
     list.push("world")
     assert_equal true, list.include?("hello")
@@ -127,7 +120,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_find_a_given_node
-    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -137,7 +129,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_inserts_node_at_arbitrary_position
-    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -149,7 +140,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_inserted_node_is_next_node_for_previous_node
-    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -161,7 +151,6 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_insert_after_adds_a_node_after_a_given_node
-    skip
     list.push("hello")
     list.push("world")
     list.push("today")
