@@ -11,10 +11,12 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_starts_with_zero_elements
+    skip
     assert_equal 0, list.count
   end
 
   def test_it_pushes_three_elements_onto_a_list
+    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -22,6 +24,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_pops_the_last_element_from_the_list
+    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -31,6 +34,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_a_popped_element_is_removed
+    skip
     list.push("hello")
     output = list.pop
     assert_equal "hello", output
@@ -38,16 +42,19 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_pops_nil_when_there_are_no_elements
+    skip
     assert_nil list.pop
   end
 
   def test_it_deletes_a_solo_node
+    skip
     list.push("hello")
     list.delete("hello")
     assert_equal 0, list.count
   end
 
   def test_it_does_not_delete_when_the_data_does_not_match
+    skip
     list.push("hello")
     list.push("world")
     list.delete("today")
@@ -55,6 +62,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_deletes_a_last_node
+    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -63,6 +71,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_deletes_a_middle_node
+    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -73,6 +82,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_deletes_the_head_when_there_are_more_nodes
+    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -83,10 +93,12 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_converts_to_an_array_when_there_are_no_elements
+    skip
     assert_equal [], list.to_a
   end
 
   def test_it_converts_to_an_array_with_several_elements
+    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -94,6 +106,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_it_finds_the_last_node
+    skip
     list.push("hello")
     list.push("world")
     node = list.last_node
@@ -101,6 +114,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_a_node_links_to_its_next_element
+    skip
     list.push("hello")
     list.push("world")
     assert_equal "world", list.last_node.data
@@ -108,11 +122,13 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_next_node_for_the_last_node_is_nil
+    skip
     list.push("world")
     assert_nil list.last_node.next_node
   end
 
   def test_find_if_an_element_is_included_in_the_list
+    skip
     list.push("hello")
     list.push("world")
     assert_equal true, list.include?("hello")
@@ -120,6 +136,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_find_a_given_node
+    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -129,6 +146,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_inserts_node_at_arbitrary_position
+    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -140,6 +158,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_inserted_node_is_next_node_for_previous_node
+    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -151,6 +170,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_insert_after_adds_a_node_after_a_given_node
+    skip
     list.push("hello")
     list.push("world")
     list.push("today")
@@ -162,6 +182,7 @@ class IterativeLinkedListTest < Minitest::Test
   end
 
   def test_distance_returns_distance_between_two_nodes
+    skip
     list.push("hello")
     list.push("pizza")
     list.push("world")
